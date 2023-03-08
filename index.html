@@ -10,7 +10,7 @@
   <title>Aframe</title>
 </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: ./targets.mind; maxTrack: 2" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind; maxTrack: 3" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <!-- <a-assets>
         <img id="card" src="./1320d4fc3489bc614f6c2d5bc4a37da2.jpg" />
       </a-assets> -->
@@ -25,9 +25,14 @@
       </a-entity>
 
       <a-entity mindar-image-target="targetIndex: 2">
-        <a-box position="0 1.25 -5"src="/1320d4fc3489bc614f6c2d5bc4a37da2.jpg" radius="1.25"></a-box>
+        <a-box position="0 1.25 -5" id="batata" class="clickable" src="/1320d4fc3489bc614f6c2d5bc4a37da2.jpg" radius="1.25"></a-box>
       </a-entity>
 
     </a-scene>
+    <script>
+          document.getElementById('batata').addEventListener("click", event  => {
+              alert("Hello");
+          });
+    </script>
   </body>
 </html>
